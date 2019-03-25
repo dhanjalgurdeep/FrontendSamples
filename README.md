@@ -12,4 +12,4 @@ npm run build:elements
 Command 2#
 http-server ./demo -p 4201
 
-Developer email: dhanjal.gudeep@gmail.com
+Developer email: dhanjal.gudeep@gmail.com (Full Featured drop me a note on email Id).
