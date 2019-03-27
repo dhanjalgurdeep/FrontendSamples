@@ -6,7 +6,7 @@ This Project is just the fundamental building block for the microfront end archi
 
 Application need to be configured on local server which are based on node, angularcli and http server.
 
-Command 1#
+Command 1######
 npm run build:elements
 
 Command 2#
