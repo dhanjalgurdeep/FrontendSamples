@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from "@angular/core";
+import { Component, OnInit, ViewEncapsulation, Input } from "@angular/core";
 
 @Component({
   selector: "app-element",
@@ -7,7 +7,12 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
   encapsulation: ViewEncapsulation.Native
 })
 export class AppelementComponent implements OnInit {
-  constructor() {}
+  @Input() testparam = '';
+  constructor() {
+    console.log('inside the construsctor')
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('test param : ', this.testparam);
+  }
 }

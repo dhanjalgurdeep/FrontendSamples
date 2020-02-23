@@ -3,12 +3,14 @@ import { NgModule, Injector } from "@angular/core";
 import { createCustomElement } from "@angular/elements";
 import { AppelementComponent } from "./appelement/appelement.component";
 import { AnothereleComponent } from "./anotherele/anotherele.component";
+import { AppRoutingModule } from './routes/app-routing.module';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [AppelementComponent, AnothereleComponent],
-  imports: [BrowserModule],
+  imports: [BrowserModule, AppRoutingModule],
   entryComponents: [AppelementComponent, AnothereleComponent],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue : '/' }],
   bootstrap: []
 })
 export class AppModule {
@@ -25,5 +27,7 @@ export class AppModule {
 
     customElements.define("app-element", el);
     customElements.define("another-ele", e2);
+
+    
   }
 }
