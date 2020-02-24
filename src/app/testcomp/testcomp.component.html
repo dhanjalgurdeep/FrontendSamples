@@ -1,0 +1,13 @@
+
+<p>
+  testcomp works!
+</p>
+<a [routerLink]="['/', { outlets: { namedOutlet: ['test1'] } }]">Loading the comp1</a>
+<a [routerLink]="['/', { outlets: { namedOutlet: ['test'] } }]">Loading the comp2</a>
+<hr>
+
+<input type="button" (click)="comp1Click()" value="comp1" />
+
+<input type="button" (click)="comp2Click()" value="comp2" />
+<hr>
+<router-outlet name="namedOutlet"></router-outlet>

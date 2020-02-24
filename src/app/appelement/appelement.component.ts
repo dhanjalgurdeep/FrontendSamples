@@ -4,7 +4,7 @@ import { Component, OnInit, ViewEncapsulation, Input } from "@angular/core";
   selector: "app-element",
   templateUrl: "./appelement.component.html",
   styleUrls: ["./appelement.component.css"],
-  encapsulation: ViewEncapsulation.Native
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class AppelementComponent implements OnInit {
   @Input() testparam = '';

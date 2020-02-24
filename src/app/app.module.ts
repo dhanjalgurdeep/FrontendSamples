@@ -5,11 +5,12 @@ import { AppelementComponent } from "./appelement/appelement.component";
 import { AnothereleComponent } from "./anotherele/anotherele.component";
 import { AppRoutingModule } from './routes/app-routing.module';
 import { APP_BASE_HREF } from '@angular/common';
+import { TestcompComponent } from './testcomp/testcomp.component';
 
 @NgModule({
-  declarations: [AppelementComponent, AnothereleComponent],
+  declarations: [AppelementComponent, AnothereleComponent, TestcompComponent],
   imports: [BrowserModule, AppRoutingModule],
-  entryComponents: [AppelementComponent, AnothereleComponent],
+  entryComponents: [AppelementComponent, AnothereleComponent, TestcompComponent],
   providers: [{provide: APP_BASE_HREF, useValue : '/' }],
   bootstrap: []
 })
@@ -20,6 +21,9 @@ export class AppModule {
     const el = createCustomElement(AppelementComponent, {
       injector: this.injector
     });
+    const e3 = createCustomElement(TestcompComponent, {
+      injector: this.injector
+    });
 
     const e2 = createCustomElement(AnothereleComponent, {
       injector: this.injector
@@ -27,6 +31,7 @@ export class AppModule {
 
     customElements.define("app-element", el);
     customElements.define("another-ele", e2);
+    customElements.define("app-testcomp", e3);
 
     
   }

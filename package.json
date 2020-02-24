@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:elements": "ng build --prod && node build-script.js",
-    "serve:elements": "http-server ./demo -p 4201"
+    "serve:elements": "http-server ./demo -p 4203"
   },
   "private": true,
   "dependencies": {
